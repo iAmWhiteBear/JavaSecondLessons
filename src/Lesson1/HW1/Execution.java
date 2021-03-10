@@ -16,8 +16,8 @@ import Lesson1.HW1.Units.Robot;
 public class Execution {
     public static void main(String[] args) {
 
-        Robot electronic = new Robot();
-        Cat barsik = new Cat();
+        Robot electronic = new Robot("Electronic");
+        Cat barsik = new Cat("Barsik");
         Human alex = new Human("Alex");
         Wall wall = new Wall();
         Track track = new Track();
@@ -34,8 +34,8 @@ public class Execution {
         Course coco = new Course(new Track(),new Wall(), new Wall(), new Wall(), new Track());
         Team team = new Team("Walkers",
                 new Human("Superman",2),
-                new Human("Charle"),
-                new Human("Bettie"),
+                new Cat("Charle"),
+                new Robot("Chappie"),
                 new Human("Loosie", 0.01));
         coco.dolt(team);
         team.showResults();

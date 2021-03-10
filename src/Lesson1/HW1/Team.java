@@ -11,25 +11,25 @@ import Lesson1.HW1.Units.Human;
 public class Team {
 
     private String name;
-    private final Human[] members = new Human[4];
+    private final Champion[] members = new Champion[4];
 
 
-    public Team(String name, Human ... members) {
+    public Team(String name, Champion ... members) {
         this.name = name;
         System.arraycopy(members, 0, this.members, 0, members.length);
     }
 
     public void showResults() {
-        for (Human h: members){
+        for (Champion h: members){
             if (h.isPass()) System.out.println(h);
         }
     }
 
     public void displayMembers() {
-        for (Human m: members)System.out.println(m);
+        for (Champion m: members)System.out.println(m);
     }
 
-    public Human[] getMembers(){
+    public Champion[] getMembers(){
         return members;
     }
 }

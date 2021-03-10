@@ -14,23 +14,17 @@ import Lesson1.HW1.Units.Human;
 public class Course {
     private final Obstacle[] obstacles;
 
-    public Course(Obstacle ... obstacles) {
+    public Course(Obstacle... obstacles) {
         this.obstacles = obstacles;
     }
 
     public void dolt(Team team){
-        Human[] members = team.getMembers();
+        Champion[] members = team.getMembers();
         boolean result;
-        for (Human champion : members) {
+        for (Champion champion : members) {
             result = true;
             for (Obstacle obstacle : obstacles) {
-                if (obstacle.getClass().getSimpleName().equals("Track")) {
-                    Track t = (Track) obstacle;
-                    result = t.doTrack(champion);
-                } else {
-                    Wall w = (Wall) obstacle;
-                    result = w.doWall(champion);
-                }
+                result = obstacle.pass(champion);
                 if (!result) break;
             }
             champion.setPass(result);

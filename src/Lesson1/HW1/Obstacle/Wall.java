@@ -1,14 +1,15 @@
 package Lesson1.HW1.Obstacle;
 
-import Lesson1.HW1.CanJump;
+import Lesson1.HW1.Champion;
 
-public class Wall extends Obstacle{
+public class Wall extends Obstacle {
 
     public Wall() {
         super();
     }
 
-    public boolean doWall(CanJump unit){
+    @Override
+    public boolean pass(Champion unit) {
         return unit.jump(this.getValue());
     }
 }

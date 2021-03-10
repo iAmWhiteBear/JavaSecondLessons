@@ -1,9 +1,8 @@
 package Lesson1.HW1.Units;
 
-import Lesson1.HW1.CanJump;
-import Lesson1.HW1.CanRun;
+import Lesson1.HW1.Champion;
 
-public class Human implements CanJump, CanRun {
+public class Human implements Champion {
     private String name;
     private double stamina;
     private boolean pass = false;
