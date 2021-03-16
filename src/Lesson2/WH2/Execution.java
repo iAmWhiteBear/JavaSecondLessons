@@ -1,10 +1,5 @@
 package Lesson2.WH2;
 
-import Lesson2.MyException;
-
-import java.util.Arrays;
-import java.util.Iterator;
-
 /**
  * 3. В методе main() вызвать полученный метод,
  * обработать возможные исключения MySizeArrayException и MyArrayDataException, и вывести результат расчета.
@@ -53,7 +48,7 @@ public class Execution {
     public static void checkMatrixDimention(String[][] matrix){
         if (matrix.length!=DEPTH) throw new MyArraySizeException("incorrect amount of arrays");
         for (int i = 0; i < DEPTH; i++) {
-            if (matrix[i].length!=DEPTH) throw new MyException(String.format("incorrect length of %d array",i));
+            if (matrix[i].length!=DEPTH) throw new MyArraySizeException(String.format("incorrect length of %d array",i));
         }
     }
 
