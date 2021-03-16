@@ -37,6 +37,7 @@ public class Execution {
 //        Integer[][] result3 = parseStringMatrixToInteger(incorrect2);
 
 
+        //DISPLAY RESULT
         int sum = 0;
         for(Integer[] arr: result1){
             for (Integer i: arr){
@@ -64,7 +65,7 @@ public class Execution {
                 try{
                     result[i][j] = Integer.parseInt(matrix[i][j]);
                 }catch (NumberFormatException ex){
-                    throw new MyArrayDataException(String.format("incorrect parsing in: %d line,  %d col",i,j));
+                    throw new MyArrayDataException(String.format("incorrect parsing in: %d line,  %d col",i,j),ex);
                 }
             }
         }
